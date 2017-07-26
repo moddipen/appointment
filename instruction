@@ -1,0 +1,83 @@
+
+1. Database Configure detail 
+	
+	# Database Connection 
+
+	@ Path : config/app.php 
+	@ Name : doctor
+	@ Username : root
+	@ Password : ''
+
+2. Email 	
+	
+	Send email configure 
+
+	@ Path : config/app.php 
+	@ Transport : Smtp
+	@ Username : test2@teknomines.com
+	@ Password : test2@123
+	@ Host : ssl://md-in-53.webhostbox.net
+
+3. Register 
+
+	# Description : New user register as Doctor or patient 
+	# Url : http://localhost/doctor/users/register 
+	# Parameter : first name , last name , email , passowrd , username
+	# Manadatory : Email , Password , Username is mandatory to register as new user 
+
+4. Login
+	
+	# Description : Existing user login with their username and password 
+	# Url : http://localhost/doctor/users/login 
+	# Parameter : username , passowrd
+
+5. Logout
+	
+	# Description : Login user logout from this function  
+	# Url : http://localhost/doctor/users/logout 
+	
+6. Appointment list 
+
+	# Description : Doctor and Patient see their appointment list . 
+	
+		@ Fetch listing according to login user. 
+		@ if login user is doctor , then he will confirm or postpone patient appointment .
+		@ When appointment confirm or postpone by doctor send email to patient about this activites.
+		@ Appointment delete from both side Doctor and Patient. 
+
+	# Url : http://localhost/doctor/appointsment/index
+
+7. Add Appointment 
+
+	# Description : Appointment add by patient.
+
+		@ he/she select doctor from dropwodn and select datetime  picker .
+		@ Send email notification to doctor when patient create new appointment.
+
+	# Url : http://localhost/doctor/appointsment/add
+
+
+8. Delete Appointment 
+
+	# Description : Appointment delete by patient and doctor.
+
+		@ Appointment delete from both side Doctor and Patient. 
+
+
+9. Confirm Appointment 
+	
+	# Description : Appointment confirm by doctor.
+
+		@ Appointment confirm from  Doctor side. 
+
+		@ Send email to patient when confirm from doctor
+
+10.	Postpone Appointment
+
+	# Description : Appointment postpone by doctor.
+
+		@ Appointment confirm from  Doctor side. 
+
+		@ Send email to patient when postpone from doctor
+
+
